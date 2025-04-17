@@ -77,4 +77,5 @@ fun main() {
     val fearow = mapOf(//22
         "NORMAL" to listOf(""),
         "VÔO" to listOf("COMBATE", "ERRO", "GRAMA"))
+        val teste = 0
 }
