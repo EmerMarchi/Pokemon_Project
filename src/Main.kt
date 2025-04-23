@@ -120,4 +120,6 @@ fun main() {
     val clefairy = mapOf(//35
         "FADA" to listOf("COMBATE", "DRAGÃO", "ESCURO"))
 
+    val clefable = mapOf(//36
+        "FADA" to listOf("COMBATE", "DRAGÃO", "ESCURO"))
 }
