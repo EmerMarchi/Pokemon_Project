@@ -72,10 +72,52 @@ fun main() {
 
     val spearow = mapOf(//21
         "NORMAL" to listOf(""),
+        "NORMAL" to listOf(""),
         "VÔO" to listOf("COMBATE", "ERRO", "GRAMA"))
 
     val fearow = mapOf(//22
         "NORMAL" to listOf(""),
         "VÔO" to listOf("COMBATE", "ERRO", "GRAMA"))
-        val teste = 0
+
+    val ekans = mapOf(//23
+        "VENENO" to  listOf("FADA", "GRAMA"))
+
+    val arbok = mapOf(//24
+        "VENENO" to  listOf("FADA", "GRAMA"))
+
+    val pikachu = mapOf(//25
+        "ELÉTRICO" to listOf("VÔO", "ÁGUA"))
+
+    val raichu = mapOf(//26
+        "ELÉTRICO" to listOf("VÔO", "ÁGUA"))
+
+    val sandshrew = mapOf(//27
+        "CHÃO" to listOf("TÓXICO", "PEDRA", "FOGO", "ELÉTRICO", "AÇO"))
+
+    val sandslash = mapOf(//28
+        "CHÃO" to listOf("TÓXICO", "PEDRA", "FOGO", "ELÉTRICO", "AÇO"))
+
+    val nidoranFeminino = mapOf(//29
+    "VENENO" to  listOf("FADA", "GRAMA"))
+
+    val nidorina = mapOf(//30
+        "VENENO" to  listOf("FADA", "GRAMA"))
+
+    val nidoqueen = mapOf(//31
+        "VENENO" to  listOf("FADA", "GRAMA"),
+        "CHÃO" to listOf("TÓXICO", "PEDRA", "FOGO", "ELÉTRICO", "AÇO"))
+
+    val nidoranMasculino =  mapOf(//32
+        "VENENO" to  listOf("FADA", "GRAMA"))
+
+    val nidorino =  mapOf(//33
+        "VENENO" to  listOf("FADA", "GRAMA"))
+
+    val nidoking =  mapOf(//34
+        "VENENO" to  listOf("FADA", "GRAMA"),
+        "CHÃO" to listOf("TÓXICO", "PEDRA", "FOGO", "ELÉTRICO", "AÇO"))
+
+    val clefairy = mapOf(//35
+        "FADA" to listOf("COMBATE", "DRAGÃO", "ESCURO"))
+
 }
