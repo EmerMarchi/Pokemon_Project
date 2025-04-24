@@ -518,4 +518,29 @@ fun main() {
 
     val mew = mapOf(//151
         "PSÍQUICO" to listOf("COMBATE", "TÓXICO"))
+
+    //-------------------------------------------------------------------------------------
+
+    println(bubalsauro["GRAMA"])
+    println(bubalsauro["TÓXICO"])
+
+    if (bubalsauro.containsKey("GRAMA")){
+        println("Ele é do tipo GRAMA")
+    }else{
+        println("Ele não é do tipo GRAMA")
+    }
+
+    if ("FOGO" in charmander){
+        println("Sim ele é FOGO")
+    }
+
+    if (charmander["FOGO"]?.contains("GRAMA")!!){
+        println("Ele é forte contra GRAMA")
+    }else{
+        println("Ele não é forte contra GRAMA")
+    }
+
+    for ((chave, valor) in mew){
+        println("A chave é $chave -> o valor é $valor")
+    }
 }
