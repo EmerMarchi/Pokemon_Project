@@ -1,4 +1,5 @@
 fun main() {
+
     val bubalsauro = mapOf(//1
         "GRAMA" to  listOf("ÁGUA", "TERRA", "PEDRA"),
         "TÓXICO" to  listOf("FADA", "GRAMA"))
@@ -519,28 +520,131 @@ fun main() {
     val mew = mapOf(//151
         "PSÍQUICO" to listOf("COMBATE", "TÓXICO"))
 
+    val todosPokemons = mapOf(
+        "bubalsauro" to bubalsauro,
+        "charmander" to ivysaur,
+        "venusaur" to venusaur,
+        "charmander" to charmander,
+        "charmeleon" to charmeleon,
+        "charizard" to charizard,
+        "squirtle" to squirtle,
+        "wartortle" to wartortle,
+        "blastoise" to blastoise,
+        "caterpie" to caterpie,
+        "metapod" to metapod,
+        "butterfree" to butterfree,
+        "weedle" to weedle,
+        "kakuna" to kakuna,
+        "beedrill" to beedrill,
+        "pidgey" to pidgey
+        )
+
     //-------------------------------------------------------------------------------------
 
-    println(bubalsauro["GRAMA"])
-    println(bubalsauro["TÓXICO"])
+    println("Digite Nickname do Player 1:")
+    val player1 = readln()
+    println("Digite Nickname do Player 2:")
+    val player2 = readln()
+    println(player1)
+    println(player2)
 
-    if (bubalsauro.containsKey("GRAMA")){
-        println("Ele é do tipo GRAMA")
-    }else{
-        println("Ele não é do tipo GRAMA")
+    fun montarTime(nickname: String): List<String> {
+        val time = mutableListOf<String>()
+        println("\nJogador $nickname, escolha 6 Pokémons dos seguintes: ${todosPokemons.keys.joinToString(", ")}")
+        while (time.size < 6) {
+            print("Pokémon ${time.size + 1}: ")
+            val escolha = readLine()?.trim()
+            if (escolha != null && todosPokemons.containsKey(escolha)) {
+                time.add(escolha)
+            } else {
+                println("Pokémon inválido. Tente novamente.")
+            }
+        }
+        return time
     }
 
-    if ("FOGO" in charmander){
-        println("Sim ele é FOGO")
+    val time1 = montarTime(player1)
+    val time2 = montarTime(player2)
+
+    fun temVantagem(p1: Map<String, List<String>>, p2: Map<String, List<String>>): Boolean {
+        for ((tipo, vantagens) in p1) {
+            if (p2.keys.any { it in vantagens }) return true
+        }
+        return false
     }
 
-    if (charmander["FOGO"]?.contains("GRAMA")!!){
-        println("Ele é forte contra GRAMA")
-    }else{
-        println("Ele não é forte contra GRAMA")
+    var pontos1 = 0
+    var pontos2 = 0
+
+    println("\n--- INÍCIO DAS BATALHAS ---\n")
+
+    for (i in 0 until 6) {
+        val pokemon1Nome = time1[i]
+        val pokemon2Nome = time2[i]
+        val pkm1 = todosPokemons[pokemon1Nome]!!
+        val pkm2 = todosPokemons[pokemon2Nome]!!
+
+        println("Rodada ${i + 1}: $player1 usa $pokemon1Nome vs $player2 usa $pokemon2Nome")
+
+        val p1Vantagem = temVantagem(pkm1, pkm2)
+        val p2Vantagem = temVantagem(pkm2, pkm1)
+
+        val resultado = when {
+            p1Vantagem && !p2Vantagem -> {
+                pontos1++
+                "$player1 venceu a rodada!"
+            }
+            p2Vantagem && !p1Vantagem -> {
+                pontos2++
+                "$player2 venceu a rodada!"
+            }
+            else -> "Empate na rodada!"
+        }
+
+        println("Resultado: $resultado\n")
     }
 
-    for ((chave, valor) in mew){
-        println("A chave é $chave -> o valor é $valor")
+    println("--- RESULTADO FINAL ---")
+    println("$player1 venceu $pontos1 rodada(s)")
+    println("$player2 venceu $pontos2 rodada(s)")
+
+    when {
+        pontos1 > pontos2 -> println(" $player1 venceu a partida!")
+        pontos2 > pontos1 -> println(" $player2 venceu a partida!")
+        else -> println("A partida terminou em EMPATE!")
     }
+
+
+
+
+
+
+
+
+
+
+
+
+/* println(bubalsauro["GRAMA"])
+ println(bubalsauro["TÓXICO"])
+
+ if (bubalsauro.containsKey("GRAMA")){
+     println("Ele é do tipo GRAMA")
+ }else{
+     println("Ele não é do tipo GRAMA")
+ }
+
+ if ("FOGO" in charmander){
+     println("Sim ele é FOGO")
+ }
+
+ if (charmander["FOGO"]?.contains("GRAMA")!!){
+     println("Ele é forte contra GRAMA")
+ }else{
+     println("Ele não é forte contra GRAMA")
+ }
+
+ for ((chave, valor) in mew){
+     println("A chave é $chave -> o valor é $valor")
+ }*/
 }
