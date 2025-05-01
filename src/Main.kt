@@ -145,11 +145,11 @@ fun main() {
         "TÓXICO" to  listOf("FADA", "GRAMA"),
         "VÔO" to listOf("COMBATE", "ERRO", "GRAMA"))
 
-    val estranho = mapOf(//43
+    val oddish = mapOf(//43
         "GRAMA" to  listOf("ÁGUA", "TERRA", "PEDRA"),
         "TÓXICO" to  listOf("FADA", "GRAMA"))
 
-    val melancolia = mapOf(//44
+    val gloom = mapOf(//44
         "GRAMA" to  listOf("ÁGUA", "TERRA", "PEDRA"),
         "TÓXICO" to  listOf("FADA", "GRAMA"))
 
@@ -182,7 +182,7 @@ fun main() {
     val miau = mapOf(//52
         "NORMAL" to listOf(""))
 
-    val persa = mapOf(//53
+    val persian = mapOf(//53
         "NORMAL" to listOf(""))
 
     val pysduck = mapOf(//54
@@ -406,7 +406,7 @@ fun main() {
     val goldeen = mapOf(//118
         "ÁGUA" to listOf("CHÃO", "PEDRA", "FOGO"))
 
-    val seajing = mapOf(//119
+    val seaking = mapOf(//119
         "ÁGUA" to listOf("CHÃO", "PEDRA", "FOGO"))
 
     val staryu = mapOf(//120
@@ -536,8 +536,142 @@ fun main() {
         "weedle" to weedle,
         "kakuna" to kakuna,
         "beedrill" to beedrill,
-        "pidgey" to pidgey
-        )
+        "pidgey" to pidgey,
+        "pidgeotto" to pidgeotto,
+        "pidgeot" to pidgeot,
+        "rattata" to rattata,
+        "raticate" to raticate,
+        "spearow" to spearow,
+        "fearow" to fearow,
+        "ekans" to ekans,
+        "arbok" to arbok,
+        "pikachu" to pikachu,
+        "raichu" to raichu,
+        "sandshrew" to sandshrew,
+        "sandslash" to sandslash,
+        "nidoranMasculino" to nidoranMasculino,
+        "nidoranFeminino" to nidoranFeminino,
+        "nidoqueen" to nidoqueen,
+        "nidoranFeminino" to nidoranFeminino,
+        "nidoranMasculino" to nidoranMasculino,
+        "nidoking" to nidoking,
+        "clefairy" to clefairy,
+        "clefable" to clefable,
+        "vulpix" to vulpix,
+        "ninetales" to ninetales,
+        "jigglypuff" to jigglypuff,
+        "wigglytuff" to wigglytuff,
+        "zubat" to zubat,
+        "golbat" to golbat,
+        "oddish" to oddish,
+        "gloom" to gloom,
+        "vileplume" to vileplume,
+        "paras" to paras,
+        "parasect" to parasect,
+        "venonat" to venonat,
+        "venomoth" to venomoth,
+        "diglett" to diglett,
+        "dugtrio" to dugtrio,
+        "mewtwo" to mewtwo,
+        "persian" to persian,
+        "pysduck" to pysduck,
+        "golduck" to golduck,
+        "mankey" to mankey,
+        "primeape" to primeape,
+        "growlithe" to growlithe,
+        "arcanine" to arcanine,
+        "poliwag" to poliwag,
+        "poliwhirl" to poliwhirl,
+        "poliwrath" to poliwrath,
+        "abra" to abra,
+        "kadabra" to kadabra,
+        "alakazam" to alakazam,
+        "machop" to machop,
+        "machoke" to machoke,
+        "machamp" to machamp,
+        "bellsprout" to bellsprout,
+        "weepinbell" to weepinbell,
+        "victreebel" to victreebel,
+        "tentacool" to tentacool,
+        "tentacruel" to tentacruel,
+        "geodude" to geodude,
+        "graveler" to graveler,
+        "golem" to golem,
+        "ponyta" to ponyta,
+        "rapidash" to rapidash,
+        "slowpoke" to slowpoke,
+        "slowbro" to slowbro,
+        "magnemite" to magnemite,
+        "magneton" to magneton,
+        "farfetchd" to farfetchd,
+        "doduo" to doduo,
+        "dodrio" to dodrio,
+        "seel" to seel,
+        "dewgong" to dewgong,
+        "grimer" to grimer,
+        "muk" to muk,
+        "shellder" to shellder,
+        "cloyster" to cloyster,
+        "gastly" to gastly,
+        "haunter" to haunter,
+        "gengar" to gengar,
+        "onix" to onix,
+        "drowzee" to drowzee,
+        "mew" to mew,
+        "mewtwo" to mewtwo,
+        "dragonite" to dragonite,
+        "dragonair" to dragonair,
+        "dratini" to dratini,
+        "moltres" to moltres,
+        "zapdos" to zapdos,
+        "articuno" to articuno,
+        "snorlax" to snorlax,
+        "aerodactyl" to aerodactyl,
+        "kabutops" to kabutops,
+        "kabuto" to kabuto,
+        "omastar" to omastar,
+        "omanyte" to omanyte,
+        "porygon" to porygon,
+        "flareon" to flareon,
+        "jolteon" to jolteon,
+        "vaporeon" to vaporeon,
+        "eevee" to eevee,
+        "ditto" to ditto,
+        "lapras" to lapras,
+        "gyarados" to gyarados,
+        "magikarp" to magikarp,
+        "tauros" to tauros,
+        "pinsir" to pinsir,
+        "magmar" to magmar,
+        "electabuzz" to electabuzz,
+        "jynx" to jynx,
+        "scyther" to scyther,
+        "mrmime" to mrmime,
+        "starmie" to starmie,
+        "staryu" to staryu,
+        "seajing" to seaking,
+        "goldeen" to goldeen,
+        "seadra" to seadra,
+        "horsea" to horsea,
+        "kangaskhan" to kangaskhan,
+        "tangela" to tangela,
+        "chansey" to chansey,
+        "rhydon" to rhydon,
+        "rhyhorn" to rhyhorn,
+        "weezing" to weezing,
+        "lickitung" to lickitung,
+        "hitmonchan" to hitmonchan,
+        "hitmonlee" to hitmonlee,
+        "marowak" to marowak,
+        "cubone" to cubone,
+        "exeggutor" to exeggutor,
+        "exeggcute" to exeggcute,
+        "electrode" to electrode,
+        "voltorb" to voltorb,
+        "kingler" to kingler,
+        "krabby" to krabby,
+        "hypno" to hypno
+    )
 
     //-------------------------------------------------------------------------------------
 
