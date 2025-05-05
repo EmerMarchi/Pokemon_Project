@@ -522,7 +522,7 @@ fun main() {
 
     val todosPokemons = mapOf(
         "bubalsauro" to bubalsauro,
-        "charmander" to ivysaur,
+        "ivysaur" to ivysaur,
         "venusaur" to venusaur,
         "charmander" to charmander,
         "charmeleon" to charmeleon,
@@ -684,10 +684,10 @@ fun main() {
 
     fun montarTime(nickname: String): List<String> {
         val time = mutableListOf<String>()
-        println("\nJogador $nickname, escolha 6 Pokémons dos seguintes: ${todosPokemons.keys.joinToString(", ")}")
+        println("\nJogador $nickname, escolha 6 Pokémons: ")
         while (time.size < 6) {
             print("Pokémon ${time.size + 1}: ")
-            val escolha = readLine()?.trim()
+            val escolha = readLine()?.toLowerCase()
             if (escolha != null && todosPokemons.containsKey(escolha)) {
                 time.add(escolha)
             } else {
@@ -747,38 +747,4 @@ fun main() {
         pontos2 > pontos1 -> println(" $player2 venceu a partida!")
         else -> println("A partida terminou em EMPATE!")
     }
-
-
-
-
-
-
-
-
-
-
-
-
-/* println(bubalsauro["GRAMA"])
- println(bubalsauro["TÓXICO"])
-
- if (bubalsauro.containsKey("GRAMA")){
-     println("Ele é do tipo GRAMA")
- }else{
-     println("Ele não é do tipo GRAMA")
- }
-
- if ("FOGO" in charmander){
-     println("Sim ele é FOGO")
- }
-
- if (charmander["FOGO"]?.contains("GRAMA")!!){
-     println("Ele é forte contra GRAMA")
- }else{
-     println("Ele não é forte contra GRAMA")
- }
-
- for ((chave, valor) in mew){
-     println("A chave é $chave -> o valor é $valor")
- }*/
 }
