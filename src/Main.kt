@@ -687,7 +687,7 @@ fun main() {
         println("\nJogador $nickname, escolha 6 Pokémons: ")
         while (time.size < 6) {
             print("Pokémon ${time.size + 1}: ")
-            val escolha = readLine()?.toLowerCase()
+            val escolha = readLine()?.lowercase()
             if (escolha != null && todosPokemons.containsKey(escolha)) {
                 time.add(escolha)
             } else {
